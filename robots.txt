@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ivanvinitskiy23-dev.github.io/sitemap.xml

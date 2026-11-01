@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en" data-theme="emerald">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qwiqly · Presentations, Landings &amp; Product Surfaces</title>
+  <meta name="description" content="Qwiqly designs presentations, landings, and product surfaces — shipped as interactive HTML, PDF, and editable PPTX. Europe / Kyiv.">
+  <meta name="theme-color" content="#050806">
+  <meta name="color-scheme" content="dark light">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta property="og:title" content="Qwiqly · Presentations, Landings &amp; Product Surfaces">
+  <meta property="og:description" content="Presentations, landings, and product surfaces. Interactive HTML viewers plus PDF and PPTX. Six theme systems, one studio.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ivanvinitskiy23-dev.github.io/">
+  <meta property="og:image" content="https://ivanvinitskiy23-dev.github.io/assets/work/aethel-orbital-astrodynamics/cover-1200.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://ivanvinitskiy23-dev.github.io/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="font" href="assets/fonts/inter-400-700-normal.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="assets/fonts/jetbrains-mono-400-600-normal.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/base.css?v=ticker-fix">
+  <link rel="stylesheet" href="assets/css/themes.css?v=ticker-fix">
+  <link rel="stylesheet" href="assets/css/heroes.css?v=sticky-fixed">
+  <noscript>
+    <style>
+      .reveal, .reveal.in { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      var allowed = ["emerald", "ora", "pixel", "atomic", "onion", "coppola"];
+      var theme = "emerald";
+      try {
+        var q = new URLSearchParams(location.search).get("theme");
+        var saved = localStorage.getItem("qw-theme");
+        if (q && allowed.indexOf(q) > -1) theme = q;
+        else if (saved && allowed.indexOf(saved) > -1) theme = saved;
+      } catch (e) {}
+      root.dataset.theme = theme;
+      window.__QW_THEME = theme;
+      if (theme === "emerald") {
+        var pl = document.createElement("link");
+        pl.rel = "preload";
+        pl.as = "image";
+        pl.type = "image/webp";
+        pl.href = "assets/img/mascot-directions.webp?v=original";
+        pl.setAttribute("fetchpriority", "high");
+        document.head.appendChild(pl);
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://ivanvinitskiy23-dev.github.io/#person",
+        "name": "Qwiqly",
+        "jobTitle": "Presentation designer",
+        "description": "Presentation design and visual systems for boards, buyers, and launches.",
+        "url": "https://ivanvinitskiy23-dev.github.io/",
+        "address": { "@type": "PostalAddress", "addressLocality": "Kyiv", "addressRegion": "Europe" }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Qwiqly",
+        "url": "https://ivanvinitskiy23-dev.github.io/",
+        "description": "Portfolio of pitch decks and presentation systems."
+      },
+      {
+        "@type": "Service",
+        "name": "Presentation design",
+        "provider": { "@id": "https://ivanvinitskiy23-dev.github.io/#person" },
+        "serviceType": ["Pitch Decks", "Brand Presentations", "Visual Systems", "Deck Viewers"],
+        "areaServed": "Europe"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="Qwiqly · home">Qwiqly<i>.</i></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work" data-i18n="nav.work">Work (13)</a>
+        <a href="#themes" data-i18n="nav.themes">Themes (6)</a>
+        <a href="#method" data-i18n="nav.method">Method</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Language">
+          <button type="button" class="lang-opt" data-lang-set="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-opt" data-lang-set="de" aria-pressed="false">DE</button>
+          <button type="button" class="lang-opt" data-lang-set="fr" aria-pressed="false">FR</button>
+          <button type="button" class="lang-opt" data-lang-set="es" aria-pressed="false">ES</button>
+        </div>
+        <button class="theme-btn" type="button" id="themeBtn" aria-expanded="false" aria-controls="themePop" aria-haspopup="dialog">
+          <span class="sw" aria-hidden="true"></span>
+          Theme
+          <span class="chev" aria-hidden="true">▾</span>
+        </button>
+        <a class="btn btn--sm" href="#contact" data-i18n="nav.cta">Email us</a>
+      </div>
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="themepop" id="themePop" role="dialog" aria-modal="false" aria-labelledby="themePopTitle">
+    <div class="themepop-head">
+      <p id="themePopTitle">Theme system</p>
+      <kbd>ESC</kbd>
+    </div>
+    <div class="themepop-list" id="themePopList">
+      <button class="tp-opt" type="button" data-theme-set="emerald" aria-pressed="true">
+        <span class="tp-sw" style="--c:var(--sw-emerald)" aria-hidden="true"></span>
+        <span><b>Emerald Mechanic</b><small>Brand face · Unit Q</small></span>
+        <span class="tp-key">01</span>
+      </button>
+      <button class="tp-opt" type="button" data-theme-set="ora" aria-pressed="false">
+        <span class="tp-sw" style="--c:var(--sw-ora)" aria-hidden="true"></span>
+        <span><b>Ora Acid</b><small>Acid fintech</small></span>
+        <span class="tp-key">02</span>
+      </button>
+      <button class="tp-opt" type="button" data-theme-set="pixel" aria-pressed="false">
+        <span class="tp-sw" style="--c:var(--sw-pixel)" aria-hidden="true"></span>
+        <span><b>Pixel Gallery</b><small>Arcade gallery</small></span>
+        <span class="tp-key">03</span>
+      </button>
+      <button class="tp-opt" type="button" data-theme-set="atomic" aria-pressed="false">
+        <span class="tp-sw" style="--c:var(--sw-atomic)" aria-hidden="true"></span>
+        <span><b>Atomic Chrome</b><small>Liquid metal</small></span>
+        <span class="tp-key">04</span>
+      </button>
+      <button class="tp-opt" type="button" data-theme-set="onion" aria-pressed="false">
+        <span class="tp-sw" style="--c:var(--sw-onion)" aria-hidden="true"></span>
+        <span><b>Onion Wave</b><small>Paper editorial</small></span>
+        <span class="tp-key">05</span>
+      </button>
+      <button class="tp-opt" type="button" data-theme-set="coppola" aria-pressed="false">
+        <span class="tp-sw" style="--c:var(--sw-coppola)" aria-hidden="true"></span>
+        <span><b>Coppola Noir</b><small>Cinema</small></span>
+        <span class="tp-key">06</span>
+      </button>
+    </div>
+    <p class="themepop-foot">Saved on this device. Share a skin with <code id="tp-share">?theme=onion</code>.</p>
+  </div>
+
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+    <a class="d-link" href="#work" data-i18n="nav.work">Work (13)</a>
+    <a class="d-link" href="#themes" data-i18n="nav.themes">Themes (6)</a>
+    <a class="d-link" href="#method" data-i18n="nav.method">Method</a>
+    <a class="d-link" href="#about" data-i18n="nav.about">About</a>
+    <div class="drawer-foot">
+      <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+        <button type="button" class="lang-opt" data-lang-set="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-opt" data-lang-set="de" aria-pressed="false">DE</button>
+        <button type="button" class="lang-opt" data-lang-set="fr" aria-pressed="false">FR</button>
+        <button type="button" class="lang-opt" data-lang-set="es" aria-pressed="false">ES</button>
+      </div>
+      <div class="drawer-themes" aria-label="Theme">
+        <button type="button" data-theme-set="emerald" aria-pressed="true"><span class="sw" style="--c:var(--sw-emerald)"></span>Emerald</button>
+        <button type="button" data-theme-set="ora" aria-pressed="false"><span class="sw" style="--c:var(--sw-ora)"></span>Ora</button>
+        <button type="button" data-theme-set="pixel" aria-pressed="false"><span class="sw" style="--c:var(--sw-pixel)"></span>Pixel</button>
+        <button type="button" data-theme-set="atomic" aria-pressed="false"><span class="sw" style="--c:var(--sw-atomic)"></span>Atomic</button>
+        <button type="button" data-theme-set="onion" aria-pressed="false"><span class="sw" style="--c:var(--sw-onion)"></span>Onion</button>
+        <button type="button" data-theme-set="coppola" aria-pressed="false"><span class="sw" style="--c:var(--sw-coppola)"></span>Coppola</button>
+      </div>
+      <a class="btn" href="mailto:qwiqlystudio@gmail.com?subject=Project%20inquiry%20—%20Qwiqly" data-i18n="nav.cta">Email us</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO 01 · EMERALD ============ -->
+    <section class="hero hero--emerald" aria-labelledby="h-emerald">
+      <div class="em-bg" aria-hidden="true"></div>
+      <div class="em-grid" aria-hidden="true"></div>
+      <div class="em-word" aria-hidden="true">QWIQLY</div>
+      <div class="wrap em-wrap">
+        <div class="em-copy">
+          <p class="eyebrow" data-i18n="hero.em.eyebrow"><time datetime="2026" aria-hidden="true"></time>Presentation &amp; landing design · Europe / Kyiv</p>
+          <h1 class="em-h1" id="h-emerald" data-i18n="hero.em.h1" aria-label="Presentations & landings that read clean.">Presentations &amp; landings<br>that <em>read clean</em>.</h1>
+          <p class="em-lead" data-i18n="hero.em.lead">We design decks, launch pages, and lightweight product surfaces for teams with serious ideas. Clear arguments, custom visual systems, and zero template sludge.</p>
+          <div class="em-actions">
+            <a class="btn" href="#work" data-i18n="hero.em.cta_primary">View work (13) <span class="ar" aria-hidden="true">↗</span></a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="hero.em.cta_secondary">Email us</a>
+          </div>
+          <ul class="em-services" aria-label="Offerings">
+            <li data-i18n="hero.em.service_1">Pitch Decks</li>
+            <li data-i18n="hero.em.service_2">B2B Presentations</li>
+            <li data-i18n="hero.em.service_3">Product Landings</li>
+            <li data-i18n="hero.em.service_4">Product Surfaces</li>
+          </ul>
+        </div>
+        <div class="em-stage">
+          <div class="em-orbit" aria-hidden="true"></div>
+          <span class="em-stage-badge" data-i18n="hero.em.mascot_badge">Unit Q / studio mechanic</span>
+          <div class="mascot" id="mascot" role="button" tabindex="0" aria-label="Unit Q, the Qwiqly mechanic. Move the pointer to make it look; press Enter to cycle expressions.">
+            <div class="mascot-sheet" data-sheet="directions"></div>
+            <span class="sr-only">Unit Q follows the pointer. Press Enter to change expression.</span>
+          </div>
+          <span class="mascot-hint" aria-hidden="true">Move to look · press to boop</span>
+          <div class="em-stage-meta" aria-hidden="true">
+            <span><b>13</b> decks</span>
+            <span><b>06</b> systems</span>
+            <span><b>01</b> mechanic</span>
+          </div>
+        </div>
+      </div>
+      <div class="wrap em-strip" aria-hidden="true">
+        <span data-i18n="hero.em.strip"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M6 0v12M0 6h12M1.8 1.8l8.4 8.4M10.2 1.8L1.8 10.2"/></svg> Interactive HTML in the browser · PDF & editable PPTX on hand · Scroll ↓</span>
+      </div>
+    </section>
+
+    <!-- ============ HERO 02 · ORA ============ -->
+    <section class="hero hero--ora hx hx--ora" id="hero-ora" data-engine="ora" aria-labelledby="h-ora">
+      <div class="ora-glow" aria-hidden="true"></div>
+      <div class="ora-scan" aria-hidden="true"></div>
+
+      <div class="ora-shell">
+        <div class="ora-top">
+          <span class="ora-live"><i></i>Qwiqly / acid systems</span>
+          <span>Portfolio 2026 · 02 / 06</span>
+        </div>
+
+        <div class="ora-main">
+          <div class="ora-left">
+            <h1 class="ora-h1" id="h-ora" data-i18n="hero.ora.h1">Decks &amp; pages<br><em>with pulse.</em></h1>
+            <p class="ora-kicker" data-i18n="hero.ora.kicker">Visual systems &amp; interfaces</p>
+            <p class="ora-lead" data-i18n="hero.ora.lead">Dense visual pacing, assertive typography, and responsive browser decks for fintech, tech startups, and launches that cannot look generic.</p>
+            <a class="ora-link" href="#contact" data-i18n="hero.ora.cta">Email us <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="ora-stack" id="ora-stack" data-active="1" tabindex="0" role="group" aria-label="Selected decks. Drag & toss cards, scrub slides or use arrow keys.">
+            <div class="ora-card" data-card="1" data-deck="vance-turnaround" role="button" tabindex="0" aria-label="Vance Turnaround · drag to toss or scrub slides" aria-current="true">
+              <div class="ora-media">
+                <img class="ora-slide-img" src="assets/work/vance-turnaround/cover-640.webp" alt="Vance Turnaround" width="640" height="360" loading="eager" decoding="async">
+                <div class="ora-scrub-bar" aria-hidden="true">
+                  <div class="ora-scrub-track"><div class="ora-scrub-progress"></div></div>
+                  <span class="ora-scrub-label">Slide 01 / 08</span>
+                </div>
+              </div>
+              <div class="ora-card-foot">
+                <span class="ora-tag">01 / Vance</span>
+                <a class="ora-card-open" href="work/vance-turnaround.html?theme=ora" title="Open Vance Turnaround">Open</a>
+              </div>
+            </div>
+
+            <div class="ora-card" data-card="2" data-deck="kinesthetic-lab" role="button" tabindex="0" aria-label="Kinesthetic Lab · bring forward or drag to toss" aria-current="false">
+              <div class="ora-media">
+                <img class="ora-slide-img" src="assets/work/kinesthetic-lab/cover-640.webp" alt="Kinesthetic Lab" width="640" height="360" loading="lazy" decoding="async">
+                <div class="ora-scrub-bar" aria-hidden="true">
+                  <div class="ora-scrub-track"><div class="ora-scrub-progress"></div></div>
+                  <span class="ora-scrub-label">Slide 01 / 08</span>
+                </div>
+              </div>
+              <div class="ora-card-foot">
+                <span class="ora-tag">02 / Kinesthetic</span>
+                <a class="ora-card-open" href="work/kinesthetic-lab.html?theme=ora" title="Open Kinesthetic Lab">Open</a>
+              </div>
+            </div>
+
+            <div class="ora-card" data-card="3" data-deck="aura-kinetic" role="button" tabindex="0" aria-label="AURA × Kinetic · bring forward or drag to toss" aria-current="false">
+              <div class="ora-media">
+                <img class="ora-slide-img" src="assets/work/aura-kinetic/cover-640.webp" alt="AURA × Kinetic" width="640" height="360" loading="lazy" decoding="async">
+                <div class="ora-scrub-bar" aria-hidden="true">
+                  <div class="ora-scrub-track"><div class="ora-scrub-progress"></div></div>
+                  <span class="ora-scrub-label">Slide 01 / 08</span>
+                </div>
+              </div>
+              <div class="ora-card-foot">
+                <span class="ora-tag">03 / AURA</span>
+                <a class="ora-card-open" href="work/aura-kinetic.html?theme=ora" title="Open AURA × Kinetic">Open</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ora-rail">
+          <p class="ora-now" aria-live="polite"><span id="ora-label">Vance Turnaround</span><i>·</i>deck 01</p>
+          <p class="ora-hint" data-i18n="hero.ora.hint" aria-hidden="true">Scrub cards ← → or open full deck</p>
+        </div>
+      </div>
+
+      <div class="ora-ticker" aria-hidden="true">
+        <div class="ora-ticker-track">
+          <span data-i18n="hero.ora.ticker">Pitch decks · Product landings · B2B offers · Product surfaces · Interactive HTML · PDF &amp; PPTX · 13 projects in catalog · Qwiqly Studio ·</span>
+          <span aria-hidden="true">Pitch decks · Product landings · B2B offers · Product surfaces · Interactive HTML · PDF &amp; PPTX · 13 projects in catalog · Qwiqly Studio ·</span>
+          <span aria-hidden="true">Pitch decks · Product landings · B2B offers · Product surfaces · Interactive HTML · PDF &amp; PPTX · 13 projects in catalog · Qwiqly Studio ·</span>
+          <span aria-hidden="true">Pitch decks · Product landings · B2B offers · Product surfaces · Interactive HTML · PDF &amp; PPTX · 13 projects in catalog · Qwiqly Studio ·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HERO 03 · PIXEL ============ -->
+    <section class="hero hero--pixel hx hx--pixel" id="hero-pixel" data-engine="pixel" aria-labelledby="h-pixel">
+      <div class="px-stage" id="px-stage">
+        <canvas class="px-game-canvas" id="px-game-canvas" width="1280" height="720" aria-hidden="true"></canvas>
+        <div class="px-crt" aria-hidden="true"></div>
+        <div class="px-vig" aria-hidden="true"></div>
+      </div>
+
+      <div class="px-ui">
+        <div class="px-hud">
+          <p class="px-hud-left">
+            <span>Score <b id="px-hud-score">00000</b></span>
+            <span>Hi <b id="px-hud-hiscore">00000</b></span>
+            <span>Chain <b id="px-hud-chain">x1</b></span>
+          </p>
+          <p class="px-hud-right">
+            <span id="px-hud-mode">Autopilot</span>
+            <button id="px-sfx-toggle" type="button" aria-pressed="false">SFX: Off</button>
+          </p>
+        </div>
+
+        <div class="px-copy">
+          <p class="px-kicker" data-i18n="hero.px.kicker"><time datetime="2026" aria-hidden="true"></time><i aria-hidden="true"></i>Qwiqly arcade · 13 works loaded</p>
+          <h1 class="px-h1" id="h-pixel" data-i18n="hero.px.h1">Clean craft.<br><span>Zero slop.</span></h1>
+          <p class="px-lead" data-i18n="hero.px.lead">No auto-generated template mush. Every slide and landing is built by hand with rigorous typography, conscious hierarchy, and structured logic.</p>
+          <div class="px-actions">
+            <a class="px-btn" href="#work" data-i18n="hero.px.cta_primary">View cases ▶</a>
+            <a class="px-btn px-btn--ghost" href="#contact" data-i18n="hero.px.cta_secondary">Email us</a>
+          </div>
+        </div>
+
+        <nav class="px-dock" aria-label="Sections">
+          <a class="px-dock-item" href="#work">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M10 18h12v2H10zm2-2h8v2h-8zm-1 4h10v8H11zm2 2v4h6v-4zM14 8h4v2h-4zm-2 2h8v6h-2v-2h-4v2h-2z"/></svg>
+            <span>Decks</span>
+          </a>
+          <a class="px-dock-item" href="#themes">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M15 4h2v4h4v2h-2v2h2v2h-2v2h2v2h-4v4h-2v-4H9v-2h2v-2H9v-2h2v-2H9V8h4z"/><path fill="currentColor" d="M6 22h4v2H6zm16 0h4v2h-4zM10 24h4v2h-4zm8 0h4v2h-4zM12 26h8v2h-8z"/></svg>
+            <span>Themes</span>
+          </a>
+          <a class="px-dock-item" href="#method">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M14 2h4v4h-4zm0 24h4v4h-4zM2 14h4v4H2zm24 0h4v4h-4zM8 8h4v4H8zm12 0h4v4h-4zM8 20h4v4H8zm12 0h4v4h-4zm2-6h4v4h-4zm-12 0h4v4H8z"/></svg>
+            <span>Method</span>
+          </a>
+          <a class="px-dock-item" data-deck="aethel-orbital-astrodynamics" href="work/aethel-orbital-astrodynamics.html?theme=pixel">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M8 10h16v2H8zm2 4h4v2h-4zm6 0h8v2h-8zm-6 4h12v2H10zm2 4h2v4h-2zm4 0h2v2h4v2h-6zM6 8h2v16H6zm18 0h2v12h-2z"/></svg>
+            <span>Viewers</span>
+          </a>
+          <a class="px-dock-item" href="#contact">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M14 4h4v2h4v2h2v4h2v4h-2v4h-2v2h-4v2h-4v-2H10v-2H8v-4H6v-4h2v-4h2V6h4zm2 6h-2v2h-2v4h2v2h4v-2h2v-4h-2v-2zm0 2h2v4h-4v-2h2z"/></svg>
+            <span>Contact</span>
+          </a>
+        </nav>
+      </div>
+
+      <p class="sr-only" id="px-help">Arcade interlude: the ship flies itself until you move the pointer. Move to take control, and it fires automatically at incoming blocks labelled AI SLOP, LOREM and CLICHÉ. Destroyed blocks add to your score and chain multiplier; green chips grant a triple laser. Sound is off by default.</p>
+    </section>
+
+    <!-- ============ HERO 04 · ATOMIC ============ -->
+    <section class="hero hero--atomic hx hx--atomic" id="hero-atomic" data-engine="atomic" aria-labelledby="h-atomic">
+      <div class="at-stage">
+        <canvas class="at-canvas" id="at-canvas" aria-hidden="true"></canvas>
+        <div class="at-fallback" id="at-fallback" aria-hidden="true">
+          <img src="assets/img/hero-atomic.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        </div>
+        <div class="at-scrim" aria-hidden="true"></div>
+
+        <div class="at-ui">
+          <div class="at-bar">
+            <span class="at-live"><i></i>Qwiqly / chrome systems</span>
+            <span class="at-frame">Frame <b id="at-frame">0001</b> <i>/</i> <span class="at-total">461</span></span>
+            <span class="at-idx">04 / 06</span>
+          </div>
+
+          <div class="at-mid">
+            <p class="at-eyebrow" data-i18n="hero.at.sub">High-tech &amp; engineering systems</p>
+            <h1 class="at-h1" id="h-atomic" data-i18n="hero.at.h1">Complex topics,<br>clear structure.</h1>
+            <p class="at-lead" data-i18n="hero.at.lead">Presentations and digital surfaces for security, heavy industry, analytics, and infrastructure. We turn dense telemetry and multi-layered arguments into coherent reading.</p>
+            <div class="at-actions">
+              <a class="hx-btn" href="#work" data-i18n="hero.at.cta_primary">View work (13) <span aria-hidden="true">↗</span></a>
+              <a class="hx-btn hx-btn--ghost" href="#contact" data-i18n="hero.at.cta_secondary">Email us</a>
+            </div>
+          </div>
+
+          <div class="at-foot">
+            <div class="at-scrub" aria-hidden="true">
+              <span class="at-scrub-label">Scrub</span>
+              <span class="at-scrub-track"><i id="at-scrub-fill"></i></span>
+              <span class="at-scrub-val" id="at-scrub-val">0%</span>
+            </div>
+            <div class="at-meta" aria-hidden="true">
+              <span><b>13</b> decks</span>
+              <span><b>06</b> systems</span>
+              <span><code><b>HTML</b> / PDF / PPTX</code></span>
+            </div>
+          </div>
+        </div>
+
+        <nav class="at-spy" aria-label="Sections">
+          <a class="at-spy-dot is-on" href="#hero-atomic" data-section="hero-atomic"><span>Top</span></a>
+          <a class="at-spy-dot" href="#work" data-section="work"><span>Work</span></a>
+          <a class="at-spy-dot" href="#themes" data-section="themes"><span>Themes</span></a>
+          <a class="at-spy-dot" href="#method" data-section="method"><span>Method</span></a>
+          <a class="at-spy-dot" href="#about" data-section="about"><span>About</span></a>
+          <a class="at-spy-dot" href="#contact" data-section="contact"><span>Contact</span></a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============ HERO 05 · ONION ============ -->
+    <section class="hero hero--onion hx hx--onion" id="hero-onion" data-engine="onion" aria-labelledby="h-onion">
+      <div class="mb-stage" id="mb-surface" tabindex="0" role="group" aria-label="Interactive tensile membrane. Drag to pull the surface, release to let it snap back. Arrow keys move the pressure point, space pulls. Press the Save plot button to export the drawing.">
+        <canvas class="mb-canvas" id="mb-canvas" aria-hidden="true"></canvas>
+        <div class="mb-veil" aria-hidden="true"></div>
+        <div class="mb-hair" aria-hidden="true"></div>
+
+        <div class="mb-ui">
+          <div class="mb-bar">
+            <span class="mb-mark"><b>Qwiqly</b><i>·</i>tensile systems</span>
+            <span class="mb-bar-mid">Sheet / <b id="mb-scroll-pct">0</b>% inflated</span>
+            <span class="mb-bar-r">Index 2026 / 05</span>
+          </div>
+
+          <div class="mb-body">
+            <div class="mb-copy">
+              <p class="mb-eyebrow" data-i18n="hero.on.kicker"><time datetime="2026" aria-hidden="true"></time><i></i>Editorial &amp; architectural practice</p>
+              <h1 class="mb-h1" id="h-onion" data-i18n="hero.on.h1">Systems of order,<br>built for facts.</h1>
+              <p class="mb-lead" data-i18n="hero.on.lead">Disciplined typography, strict proportional grids, and calm reading flow. Designed for boards, institutional reports, and proposals that need clarity over decoration.</p>
+              <div class="mb-cta">
+                <a class="hx-btn" href="#work" data-i18n="hero.on.cta_primary">Open catalog <span aria-hidden="true">↗</span></a>
+                <a class="hx-btn hx-btn--ghost" href="#contact" data-i18n="hero.on.cta_secondary">Email us</a>
+              </div>
+            </div>
+
+            <div class="mb-panel">
+              <button class="mb-plot" id="mb-plot" type="button">
+                <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M1 12 5.5 4.2l4 5.1 2.2-2.7L15 12z"/><path fill="none" stroke="currentColor" stroke-width="1.3" d="M1 14.4h14"/></svg>
+                Save plot
+              </button>
+              <dl class="mb-readout">
+                <div><dt>Tension</dt><dd id="mb-t-tension">0.00</dd></div>
+                <div><dt>Span</dt><dd id="mb-t-span">7.0 m</dd></div>
+                <div><dt>Mesh</dt><dd id="mb-t-mesh">23,280</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="mb-foot">
+            <ul class="mb-marks" aria-label="Offerings">
+              <li><b>01</b><span>Pitch decks</span></li>
+              <li><b>02</b><span>Landings</span></li>
+              <li><b>03</b><span>Visual systems</span></li>
+              <li><b>04</b><span>Product surfaces</span></li>
+            </ul>
+            <p class="mb-hint" aria-hidden="true"><i></i>Drag the sheet · scroll to raise the vault</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HERO 06 · COPPOLA ============ -->
+    <section class="hero hero--coppola hx hx--coppola" id="hero-coppola" data-engine="coppola" aria-labelledby="h-coppola">
+      <div class="cp-media" aria-hidden="true">
+        <img src="assets/img/hero-coppola.webp?v=noir-v2" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+      </div>
+      <div class="cp-grade" aria-hidden="true"></div>
+
+      <div class="cp-scene">
+        <p class="cp-pre" data-i18n="hero.cp.kicker"><time datetime="2026" aria-hidden="true"></time>Direction for high-stakes meetings</p>
+        <h1 class="cp-h1" id="h-coppola" data-i18n="hero.cp.h1">When the meeting<br>matters.</h1>
+        <p class="cp-sub" data-i18n="hero.cp.lead">Cinematic contrast and large titles for brand pitches, partner rooms, and launches that need presence — not template slides.</p>
+      </div>
+
+      <canvas class="cp-rain" id="cp-rain-canvas" aria-hidden="true"></canvas>
+
+      <div class="cp-ui">
+        <div class="cp-top">
+          <span>Qwiqly presents</span>
+          <span>A presentation practice · est. 2021</span>
+          <span>06 / 06</span>
+        </div>
+
+        <div class="cp-foot">
+          <div class="cp-actions">
+            <a class="hx-btn" href="#work" data-i18n="hero.cp.cta_primary">Explore work <span aria-hidden="true">↗</span></a>
+            <a class="hx-btn hx-btn--ghost" href="#contact" data-i18n="hero.cp.cta_secondary">Email us</a>
+          </div>
+          <div class="cp-controls">
+            <button class="cp-wiper" id="cp-wiper-btn" type="button" aria-label="Sweep the windshield wipers">
+              <svg class="cp-wiper-ico" viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M3 16.5 14.4 5.1M14.4 5.1l2.1-2.1M12.6 3.4l4 4M3 16.5a3.2 3.2 0 0 1-1.4-2.7"/></svg>
+              Sweep wipers
+            </button>
+            <p class="cp-hint" data-i18n="hero.cp.hint">Drag or wipe across the glass to clear the condensation</p>
+          </div>
+        </div>
+
+        <div class="cp-laurels" aria-label="Offerings">
+          <span>HTML decks</span>
+          <code><span>PDF / PPTX</span></code>
+          <span>Europe / Kyiv</span>
+          <span>2026</span>
+        </div>
+      </div>
+
+      <p class="sr-only">The hero is a windshield covered in condensation. Move the pointer or drag a finger to wipe it clear, or press W to sweep the wipers.</p>
+    </section>
+
+    <div class="belt" aria-hidden="true">
+      <div class="belt-track">
+        <span>Pitch decks</span><span>Landings</span><span>Product surfaces</span><span>HTML · PDF · PPTX</span><span>13 decks in the archive</span><span>Europe / Kyiv</span><span>Qwiqly</span><span>2026</span>
+        <span>Pitch decks</span><span>Landings</span><span>Product surfaces</span><span>HTML · PDF · PPTX</span><span>13 decks in the archive</span><span>Europe / Kyiv</span><span>Qwiqly</span><span>2026</span>
+        <span>Pitch decks</span><span>Landings</span><span>Product surfaces</span><span>HTML · PDF · PPTX</span><span>13 decks in the archive</span><span>Europe / Kyiv</span><span>Qwiqly</span><span>2026</span>
+        <span>Pitch decks</span><span>Landings</span><span>Product surfaces</span><span>HTML · PDF · PPTX</span><span>13 decks in the archive</span><span>Europe / Kyiv</span><span>Qwiqly</span><span>2026</span>
+        <span>Pitch decks</span><span>Landings</span><span>Product surfaces</span><span>HTML · PDF · PPTX</span><span>13 decks in the archive</span><span>Europe / Kyiv</span><span>Qwiqly</span><span>2026</span>
+        <span>Pitch decks</span><span>Landings</span><span>Product surfaces</span><span>HTML · PDF · PPTX</span><span>13 decks in the archive</span><span>Europe / Kyiv</span><span>Qwiqly</span><span>2026</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-label="about" data-i18n="about.eyebrow"><time datetime="2026" aria-hidden="true"></time>About the studio</p>
+          <span class="idx" data-i18n="about.idx">Craft &amp; delivery</span>
+        </div>
+        <div class="about-grid">
+          <h2 class="about-h" id="about-title" data-i18n="about.title">Presentations and digital surfaces built to be read.</h2>
+          <div class="about-body">
+            <p data-i18n="about.p1">Qwiqly is an independent studio for presentation and landing design. We help founders, leadership teams, and product orgs turn complex ideas into clear, usable narratives.</p>
+            <p data-i18n="about.p2">We do not ship downloaded mega-templates with a logo swap. Every deck and landing is built from the argument outward — typographic discipline, scannable numbers, and formats teams can actually present and edit.</p>
+            <p data-i18n="about.surface">Beyond slides, we build Product surfaces: lightweight interfaces that connect a deck or landing flow to Telegram, Google Sheets, or custom forms when the brief needs it.</p>
+            <ul class="stats">
+              <li data-i18n="about.stat1"><b>13</b> public works on view</li>
+              <li data-i18n="about.stat2"><b>03</b> delivery formats (HTML, PDF, PPTX)</li>
+              <li data-i18n="about.stat3"><b>06</b> interactive design systems</li>
+              <li data-i18n="about.stat4"><b>00</b> stock-template shells</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="work-head">
+          <div>
+            <p class="eyebrow" data-label="work" data-i18n="work.eyebrow"><time datetime="2026" aria-hidden="true"></time>Selected work</p>
+            <h2 class="sec-title" id="work-title" data-i18n="work.title" data-label="workTitle">Thirteen decks. Selected work.</h2>
+          </div>
+          <p class="work-lead" data-i18n="work.lead">Thirteen interactive presentations across six design systems. Every project below is a full browser viewer you can navigate with arrow keys — not a static mockup.</p>
+        </div>
+
+        <div class="work-bar">
+          <div class="filters" role="group" aria-label="Filter work">
+            <button type="button" data-filter="all" data-i18n="work.filter_all" aria-pressed="true">All <span>13</span></button>
+            <button type="button" data-filter="pitch" data-i18n="work.filter_pitch" aria-pressed="false">Pitches & startups <span>3</span></button>
+            <button type="button" data-filter="brand" data-i18n="work.filter_brand" aria-pressed="false">Services & B2B <span>5</span></button>
+            <button type="button" data-filter="system" data-i18n="work.filter_system" aria-pressed="false">Brand & systems <span>5</span></button>
+          </div>
+          <p class="work-count"><b id="workCount">13</b> <span data-i18n="work.count_label">cases</span></p>
+        </div>
+
+                <a class="featured reveal" href="work/aethel-orbital-astrodynamics.html" data-type="system" data-deck="aethel-orbital-astrodynamics">
+          <div class="featured-media">
+            <picture class="pic">
+              <source type="image/avif" srcset="assets/work/aethel-orbital-astrodynamics/cover-1200.avif">
+              <img src="assets/work/aethel-orbital-astrodynamics/cover-1200.webp" alt="AETHEL Orbital · featured deck cover" width="1200" height="675" loading="lazy" decoding="async">
+            </picture>
+            <span class="featured-badge"><i></i>Featured system</span>
+            <div class="featured-thumbs" aria-hidden="true"><picture class="pic"><source type="image/avif" srcset="assets/work/aethel-orbital-astrodynamics/slide-02.avif"><img src="assets/work/aethel-orbital-astrodynamics/slide-02.webp" alt="" width="92" height="52" loading="lazy" decoding="async"></picture><picture class="pic"><source type="image/avif" srcset="assets/work/aethel-orbital-astrodynamics/slide-03.avif"><img src="assets/work/aethel-orbital-astrodynamics/slide-03.webp" alt="" width="92" height="52" loading="lazy" decoding="async"></picture><picture class="pic"><source type="image/avif" srcset="assets/work/aethel-orbital-astrodynamics/slide-04.avif"><img src="assets/work/aethel-orbital-astrodynamics/slide-04.webp" alt="" width="92" height="52" loading="lazy" decoding="async"></picture></div>
+          </div>
+          <div class="featured-copy">
+            <p class="eyebrow"><time datetime="2026" aria-hidden="true"></time>System · 2026</p>
+            <h3>AETHEL Orbital</h3>
+            <p><span data-i18n="case.aethel">Fleet logistics dossier converting astrodynamics and orbital payload economics into a coherent executive briefing.</span></p>
+            <ul class="featured-meta">
+              <li>8 slides</li>
+              <li>HTML deck</li>
+              <li>Aethel Dynamics</li>
+            </ul>
+            <span class="featured-open">Open the deck <span class="ar" aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+
+        <div class="work-grid" id="workGrid">
+                    <a class="card reveal" href="work/ecopack-pro.html" data-type="pitch" data-deck="ecopack-pro" style="--d:120ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/ecopack-pro/cover-640.avif 640w, assets/work/ecopack-pro/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/ecopack-pro/cover-640.webp" srcset="assets/work/ecopack-pro/cover-640.webp 640w, assets/work/ecopack-pro/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="EcoPack Pro · HoReCa eco packaging · B2B offer deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">02</span>
+              <span class="card-type">Pitch deck</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2026</span><span>8 slides · HTML</span></div>
+              <h3>EcoPack Pro</h3>
+              <p><span data-i18n="case.ecopack">B2B commercial presentation for restaurant chains and HoReCa distributors, focusing on unit margins and regulatory compliance.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/vance-turnaround.html" data-type="pitch" data-deck="vance-turnaround" style="--d:0ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/vance-turnaround/cover-640.avif 640w, assets/work/vance-turnaround/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/vance-turnaround/cover-640.webp" srcset="assets/work/vance-turnaround/cover-640.webp 640w, assets/work/vance-turnaround/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="Vance Turnaround · C-level turnaround strategy · 90 days deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">03</span>
+              <span class="card-type">Pitch deck</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2025</span><span>8 slides · HTML</span></div>
+              <h3>Vance Turnaround</h3>
+              <p><span data-i18n="case.vance">90-day C-level restructuring roadmap and operational priorities built for board alignment.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/vertex-structural.html" data-type="brand" data-deck="vertex-structural" style="--d:60ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/vertex-structural/cover-640.avif 640w, assets/work/vertex-structural/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/vertex-structural/cover-640.webp" srcset="assets/work/vertex-structural/cover-640.webp 640w, assets/work/vertex-structural/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="VERTEX Structural · Industrial credentials &amp; capabilities deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">04</span>
+              <span class="card-type">Brand deck</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2026</span><span>8 slides · HTML</span></div>
+              <h3>VERTEX Structural</h3>
+              <p><span data-i18n="case.vertex">Engineering capabilities and heavy construction credentials tailored for infrastructure tender qualification.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/aura-kinetic.html" data-type="pitch" data-deck="aura-kinetic" style="--d:120ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/aura-kinetic/cover-640.avif 640w, assets/work/aura-kinetic/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/aura-kinetic/cover-640.webp" srcset="assets/work/aura-kinetic/cover-640.webp 640w, assets/work/aura-kinetic/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="AURA × Kinetic · Creative audio agency proposal deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">05</span>
+              <span class="card-type">Pitch deck</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2025</span><span>8 slides · HTML</span></div>
+              <h3>AURA × Kinetic</h3>
+              <p><span data-i18n="case.aura">Creative agency proposal and strategic pitch for brand sound design and immersive audio production.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/kinesthetic-lab.html" data-type="system" data-deck="kinesthetic-lab" style="--d:0ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/kinesthetic-lab/cover-640.avif 640w, assets/work/kinesthetic-lab/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/kinesthetic-lab/cover-640.webp" srcset="assets/work/kinesthetic-lab/cover-640.webp 640w, assets/work/kinesthetic-lab/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="Kinesthetic Lab · Grainy minimal · thermal aura deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">06</span>
+              <span class="card-type">System</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2025</span><span>8 slides · HTML</span></div>
+              <h3>Kinesthetic Lab</h3>
+              <p><span data-i18n="case.kinesthetic">Minimalist interface thesis exploring sensory hardware feedback and thermal UI visual systems.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/bioma-pavilion.html" data-type="brand" data-deck="bioma-pavilion" style="--d:60ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/bioma-pavilion/cover-640.avif 640w, assets/work/bioma-pavilion/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/bioma-pavilion/cover-640.webp" srcset="assets/work/bioma-pavilion/cover-640.webp 640w, assets/work/bioma-pavilion/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="BIOMA Pavilion · Biophilic architecture · eco-futurism deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">07</span>
+              <span class="card-type">Brand deck</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2026</span><span>10 slides · HTML</span></div>
+              <h3>BIOMA Pavilion</h3>
+              <p><span data-i18n="case.bioma">Biophilic architectural proposal and sustainability presentation for municipal planning committees.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/karelia-nordic-sanctuary.html" data-type="brand" data-deck="karelia-nordic-sanctuary" style="--d:120ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/karelia-nordic-sanctuary/cover-640.avif 640w, assets/work/karelia-nordic-sanctuary/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/karelia-nordic-sanctuary/cover-640.webp" srcset="assets/work/karelia-nordic-sanctuary/cover-640.webp 640w, assets/work/karelia-nordic-sanctuary/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="Karelia · Nordic wilderness sanctuary deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">08</span>
+              <span class="card-type">Brand deck</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2025</span><span>8 slides · HTML</span></div>
+              <h3>Karelia</h3>
+              <p><span data-i18n="case.karelia">Hospitality dossier outlining a wilderness retreat concept and guest journey for development partners.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/black-agency-credentials.html" data-type="brand" data-deck="black-agency-credentials" style="--d:0ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/black-agency-credentials/cover-640.avif 640w, assets/work/black-agency-credentials/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/black-agency-credentials/cover-640.webp" srcset="assets/work/black-agency-credentials/cover-640.webp 640w, assets/work/black-agency-credentials/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="BLACK. Agency · Credentials · dark-ops editorial deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">09</span>
+              <span class="card-type">Brand deck</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2025</span><span>10 slides · HTML</span></div>
+              <h3>BLACK. Agency</h3>
+              <p><span data-i18n="case.black">Dark-ops cybersecurity and corporate crisis advisory credentials framed with restrained monochrome elegance.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/perfect-shot-eswatini.html" data-type="brand" data-deck="perfect-shot-eswatini" style="--d:60ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/perfect-shot-eswatini/cover-640.avif 640w, assets/work/perfect-shot-eswatini/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/perfect-shot-eswatini/cover-640.webp" srcset="assets/work/perfect-shot-eswatini/cover-640.webp 640w, assets/work/perfect-shot-eswatini/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="The Perfect Shot · Location narrative · Eswatini deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">10</span>
+              <span class="card-type">Brand deck</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2024</span><span>10 slides · HTML</span></div>
+              <h3>The Perfect Shot</h3>
+              <p><span data-i18n="case.perfect_shot">Narrative photojournalism sponsorship pitch for wildlife documentary filming across Eswatini.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/cortex-secops.html" data-type="system" data-deck="cortex-secops" style="--d:120ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/cortex-secops/cover-640.avif 640w, assets/work/cortex-secops/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/cortex-secops/cover-640.webp" srcset="assets/work/cortex-secops/cover-640.webp 640w, assets/work/cortex-secops/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="Cortex SecOps · Crimson telemetry · security operations deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">11</span>
+              <span class="card-type">System</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2026</span><span>10 slides · HTML</span></div>
+              <h3>Cortex SecOps</h3>
+              <p><span data-i18n="case.cortex">Enterprise security operations center briefing defending operational budget and telemetry coverage.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/novashift-cybernetics-antigravity.html" data-type="system" data-deck="novashift-cybernetics-antigravity" style="--d:0ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/novashift-cybernetics-antigravity/cover-640.avif 640w, assets/work/novashift-cybernetics-antigravity/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/novashift-cybernetics-antigravity/cover-640.webp" srcset="assets/work/novashift-cybernetics-antigravity/cover-640.webp 640w, assets/work/novashift-cybernetics-antigravity/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="NovaShift · Synthetic humans · enterprise briefing deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">12</span>
+              <span class="card-type">System</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2026</span><span>8 slides · HTML</span></div>
+              <h3>NovaShift</h3>
+              <p><span data-i18n="case.novashift">Briefing deck for enterprise leaders on collaborative robotics integration and workforce automation.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          <a class="card reveal" href="work/project-m-industrial-antigravity.html" data-type="system" data-deck="project-m-industrial-antigravity" style="--d:60ms">
+            <div class="card-media">
+              <picture class="pic">
+                <source type="image/avif" srcset="assets/work/project-m-industrial-antigravity/cover-640.avif 640w, assets/work/project-m-industrial-antigravity/cover-1200.avif 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw">
+                <img src="assets/work/project-m-industrial-antigravity/cover-640.webp" srcset="assets/work/project-m-industrial-antigravity/cover-640.webp 640w, assets/work/project-m-industrial-antigravity/cover-1200.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1080px) 46vw, 30vw" alt="Project M · Heavy industrial &amp; metallurgical EPC deck cover" width="640" height="360" loading="lazy" decoding="async">
+              </picture>
+              <span class="card-idx" aria-hidden="true">13</span>
+              <span class="card-type">System</span>
+            </div>
+            <div class="card-body">
+              <div class="card-top"><span>2025</span><span>10 slides · HTML</span></div>
+              <h3>Project M</h3>
+              <p><span data-i18n="case.project_m">EPC contractor credentials for metallurgy, mining, and heavy industrial facilities.</span></p>
+              <span class="card-open" data-i18n="work.open_deck">Open deck <i>↗</i></span>
+            </div>
+          </a>
+          
+        </div>
+        <p class="empty" id="empty" hidden>No decks in this filter. Try another one.</p>
+      </div>
+    </section>
+
+    <!-- ============ THEMES ============ -->
+    <section class="section" id="themes" aria-labelledby="themes-title">
+      <div class="wrap">
+        <div class="themes-head">
+          <div>
+            <p class="eyebrow" data-label="themes"><time datetime="2026" aria-hidden="true"></time>Systems</p>
+            <h2 class="sec-title" id="themes-title" data-i18n="themes.title">Six presentation skins.<br>One core argument.</h2>
+          </div>
+          <p class="work-lead" data-i18n="themes.lead">We don’t believe in a single one-size-fits-all aesthetic. Click any theme below to instantly morph the entire website into that visual system — exploring corporate calm, neon tech, pixel craft, liquid metal, Swiss paper, or cinema noir.</p>
+        </div>
+        <div class="theme-grid" id="themeGrid">
+                    <button class="theme-card" type="button" data-theme-set="emerald" aria-pressed="false" style="--tc:var(--sw-emerald)">
+            <div class="tc-media">
+              <img src="assets/img/theme-emerald.webp" alt="Emerald Mechanic · live theme preview" width="960" height="600" loading="lazy" decoding="async">
+              <span class="tc-badge">Live theme</span>
+            </div>
+            <div class="tc-meta">
+              <span class="tc-num">01</span>
+              <span class="tc-name">Emerald Mechanic</span>
+              <span class="tc-mood">Brand face · Unit Q</span>
+            </div>
+          </button>
+          <button class="theme-card" type="button" data-theme-set="ora" aria-pressed="false" style="--tc:var(--sw-ora)">
+            <div class="tc-media">
+              <img src="assets/img/theme-ora.webp" alt="Ora Acid · live theme preview" width="960" height="600" loading="lazy" decoding="async">
+              <span class="tc-badge">Live theme</span>
+            </div>
+            <div class="tc-meta">
+              <span class="tc-num">02</span>
+              <span class="tc-name">Ora Acid</span>
+              <span class="tc-mood">Acid fintech</span>
+            </div>
+          </button>
+          <button class="theme-card" type="button" data-theme-set="pixel" aria-pressed="false" style="--tc:var(--sw-pixel)">
+            <div class="tc-media">
+              <img src="assets/img/theme-pixel.webp" alt="Pixel Gallery · live theme preview" width="960" height="600" loading="lazy" decoding="async">
+              <span class="tc-badge">Live theme</span>
+            </div>
+            <div class="tc-meta">
+              <span class="tc-num">03</span>
+              <span class="tc-name">Pixel Gallery</span>
+              <span class="tc-mood">Arcade gallery</span>
+            </div>
+          </button>
+          <button class="theme-card" type="button" data-theme-set="atomic" aria-pressed="false" style="--tc:var(--sw-atomic)">
+            <div class="tc-media">
+              <img src="assets/img/theme-atomic.webp" alt="Atomic Chrome · live theme preview" width="960" height="600" loading="lazy" decoding="async">
+              <span class="tc-badge">Live theme</span>
+            </div>
+            <div class="tc-meta">
+              <span class="tc-num">04</span>
+              <span class="tc-name">Atomic Chrome</span>
+              <span class="tc-mood">Liquid metal</span>
+            </div>
+          </button>
+          <button class="theme-card" type="button" data-theme-set="onion" aria-pressed="false" style="--tc:var(--sw-onion)">
+            <div class="tc-media">
+              <img src="assets/img/theme-onion.webp" alt="Onion Wave · live theme preview" width="960" height="600" loading="lazy" decoding="async">
+              <span class="tc-badge">Live theme</span>
+            </div>
+            <div class="tc-meta">
+              <span class="tc-num">05</span>
+              <span class="tc-name">Onion Wave</span>
+              <span class="tc-mood">Paper editorial</span>
+            </div>
+          </button>
+          <button class="theme-card" type="button" data-theme-set="coppola" aria-pressed="false" style="--tc:var(--sw-coppola)">
+            <div class="tc-media">
+              <img src="assets/img/theme-coppola.webp" alt="Coppola Noir · live theme preview" width="960" height="600" loading="lazy" decoding="async">
+              <span class="tc-badge">Live theme</span>
+            </div>
+            <div class="tc-meta">
+              <span class="tc-num">06</span>
+              <span class="tc-name">Coppola Noir</span>
+              <span class="tc-mood">Cinema</span>
+            </div>
+          </button>
+        </div>
+        <p class="theme-note" data-i18n="themes.note">Theme selection is saved locally in your browser. Share any theme directly via URL parameter, e.g. <code>?theme=ora</code></p>
+      </div>
+    </section>
+
+    <!-- ============ METHOD ============ -->
+    <section class="section" id="method" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-label="method"><time datetime="2026" aria-hidden="true"></time>Method</p>
+          <span class="idx">03 / process</span>
+        </div>
+        <h2 class="sec-title" id="method-title" data-i18n="method.title" data-label="methodTitle">How projects get built</h2>
+        <div class="method-grid">
+          <article class="method-step">
+            <span class="m-num" data-i18n="method.step1_num">Phase 01 · Intake & Structure</span>
+            <h3 data-i18n="method.step1_h3">Brief & Core Storyline</h3>
+            <p data-i18n="method.step1_p">We review your draft, raw notes, or previous deck. We map who sits in the room, eliminate filler, and lock the single core thesis the audience must take away.</p>
+          </article>
+          <article class="method-step">
+            <span class="m-num" data-i18n="method.step2_num">Phase 02 · Visual Direction</span>
+            <h3 data-i18n="method.step2_h3">Custom Visual System</h3>
+            <p data-i18n="method.step2_p">Typography roles, color palette, and layout grids locked across 2–3 key anchor slides for mutual sign-off before full production begins.</p>
+          </article>
+          <article class="method-step">
+            <span class="m-num" data-i18n="method.step3_num">Phase 03 · Full Production</span>
+            <h3 data-i18n="method.step3_h3">Slide & Page Build</h3>
+            <p data-i18n="method.step3_p">Comprehensive design of every slide, chart, comparison table, and responsive screen with meticulous attention to visual hierarchy.</p>
+          </article>
+          <article class="method-step">
+            <span class="m-num" data-i18n="method.step4_num">Phase 04 · Complete Handoff</span>
+            <h3 data-i18n="method.step4_h3">Universal Delivery</h3>
+            <p data-i18n="method.step4_p">You receive an interactive web viewer for smooth browser presentations, a high-resolution vector PDF, and a clean editable PPTX file for future updates.</p>
+          </article>
+        </div>
+        <p class="method-footnote" data-i18n="method.surface_note" style="margin-top: 24px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px;">
+          Optional: We also build Product surfaces — connecting your deck or landing flow to Telegram notifications, Google Sheets, or custom input forms.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="eyebrow" data-label="contact"><time datetime="2026" aria-hidden="true"></time>Contact</p>
+        <h2 class="contact-h" id="contact-title" data-i18n="contact.title">Let’s discuss your presentation or landing.</h2>
+        <div class="contact-grid">
+          <div>
+            <p class="contact-lead" data-i18n="contact.lead">Tell us about the audience, the stakes, or the upcoming release. Send a draft, outline, or existing deck, and we’ll review how best to shape it.</p>
+            <ul class="contact-channels" aria-label="Direct channels">
+              <li>
+                <a class="channel channel--mail" href="mailto:qwiqlystudio@gmail.com">
+                  <span class="channel-k" data-i18n="contact.ch_mail">Email</span>
+                  <span class="channel-v">qwiqlystudio@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <a class="channel channel--tg" href="https://t.me/sje_io" target="_blank" rel="noopener noreferrer">
+                  <span class="channel-k" data-i18n="contact.ch_tg">Telegram</span>
+                  <span class="channel-v">@sje_io</span>
+                </a>
+              </li>
+              <li>
+                <a class="channel channel--wa" href="https://wa.me/qwiqly" target="_blank" rel="noopener noreferrer" title="Search @qwiqly in WhatsApp">
+                  <span class="channel-k" data-i18n="contact.ch_wa">WhatsApp</span>
+                  <span class="channel-v">@qwiqly</span>
+                </a>
+              </li>
+            </ul>
+            <p class="contact-wa-hint" data-i18n="contact.wa_hint">WhatsApp: open the app and search <b>@qwiqly</b> if the link does not resolve yet.</p>
+          </div>
+          <div class="contact-side">
+            <h3 data-i18n="contact.box_title">Helpful details to include:</h3>
+            <ul class="contact-list">
+              <li data-i18n="contact.item1">Who is the audience (investors, enterprise buyers, conference)?</li>
+              <li data-i18n="contact.item2">Estimated slide count or landing length</li>
+              <li data-i18n="contact.item3">Current state of copy (ready draft vs. rough bullet points)</li>
+              <li data-i18n="contact.item4">Target deadline or presentation date</li>
+            </ul>
+            <div class="contact-cta-row">
+              <a class="btn" href="mailto:qwiqlystudio@gmail.com?subject=Project%20inquiry%20—%20Qwiqly" data-i18n="contact.cta">Email us <span class="ar" aria-hidden="true">↗</span></a>
+              <a class="btn btn--ghost" href="https://t.me/sje_io" target="_blank" rel="noopener noreferrer" data-i18n="contact.cta_tg">Telegram <span class="ar" aria-hidden="true">↗</span></a>
+              <a class="btn btn--ghost" href="https://wa.me/qwiqly" target="_blank" rel="noopener noreferrer" title="Search @qwiqly in WhatsApp" data-i18n="contact.cta_wa">WhatsApp <span class="ar" aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <p class="contact-meta" data-i18n="contact.meta" aria-hidden="true">
+          <span>Europe / Kyiv</span>
+          <span>Cross-border collaboration</span>
+          <span>Real interactive work</span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-row">
+        <div class="footer-brand">Qwiqly<i>.</i></div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#work">Work</a>
+          <a href="#themes">Themes</a>
+          <a href="#method">Method</a>
+          <a href="#about">About</a>
+          <a href="mailto:qwiqlystudio@gmail.com">Email</a>
+          <a href="https://t.me/sje_io" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a href="https://wa.me/qwiqly" target="_blank" rel="noopener noreferrer" title="WhatsApp @qwiqly">WhatsApp</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> <span data-i18n="footer.copy">Qwiqly Studio. All rights reserved.</span></span>
+        <span data-i18n="footer.geo">Europe / Kyiv · Global client base</span>
+        <a class="to-top" href="#main" data-i18n="footer.to_top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <script src="assets/data/decks.js" defer></script>
+  <script src="assets/js/engines/membrane.js" defer></script>
+  <script src="assets/js/engines/ora.js?v=clean-toss-scrub" defer></script>
+  <script src="assets/js/engines/atomic.js?v=lift-bangs-flush" defer></script>
+  <script src="assets/js/engines/pixel.js?v=full-skyline" defer></script>
+  <script src="assets/js/engines/coppola.js?v=steam-only" defer></script>
+  <script src="assets/js/bus.js" defer></script>
+  <script src="assets/js/site.js?v=mascot-orig" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" data-theme="emerald">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AETHEL Orbital · Qwiqly deck</title>
+  <meta name="description" content="AETHEL Orbital · Astrodynamics dossier &amp; fleet logistics. A real Qwiqly deck: 8 slides, presented as an interactive HTML viewer.">
+  <meta name="theme-color" content="#060907">
+  <meta name="color-scheme" content="dark light">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://ivanvinitskiy23-dev.github.io/work/aethel-orbital-astrodynamics.html">
+  <meta property="og:title" content="AETHEL Orbital · Qwiqly deck">
+  <meta property="og:description" content="Astrodynamics dossier &amp; fleet logistics · 8 slides · interactive HTML deck.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://ivanvinitskiy23-dev.github.io/assets/work/aethel-orbital-astrodynamics/cover-1200.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="font" href="../assets/fonts/inter-400-700-normal.woff2" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/viewer.css">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var allowed = ["emerald", "ora", "pixel", "atomic", "onion", "coppola"];
+      var theme = "emerald";
+      try {
+        var q = new URLSearchParams(location.search).get("theme");
+        var saved = localStorage.getItem("qw-theme");
+        if (q && allowed.indexOf(q) > -1) theme = q;
+        else if (saved && allowed.indexOf(saved) > -1) theme = saved;
+      } catch (e) {}
+      root.dataset.theme = theme;
+      root.style.colorScheme = theme === "onion" ? "light" : "dark";
+      window.__QW_THEME = theme;
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#stage">Skip to the deck</a>
+
+  <header class="v-top">
+    <a class="v-logo" id="homeLink" href="../index.html" aria-label="Qwiqly · home">Qwiqly<i>.</i></a>
+    <div class="v-id">
+      <span class="v-kind" style="--deck:var(--accent)">System · 2026</span>
+      <h1 class="v-title">AETHEL Orbital</h1>
+    </div>
+    <div class="v-tools">
+      <span class="v-count" id="count" aria-live="polite">1 / 8</span>
+      <button class="v-icon v-zoom" id="zoom" type="button" aria-label="Zoom slide" aria-pressed="false" title="Zoom (Z)">
+        <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.3" fill="none" stroke="currentColor" stroke-width="1.4"/><path fill="none" stroke="currentColor" stroke-width="1.4" d="M10.4 10.4 14 14M5.2 7h3.6M7 5.2v3.6"/></svg>
+      </button>
+      <button class="v-icon" id="fs" type="button" aria-label="Enter fullscreen" title="Fullscreen (F)">
+        <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4"/></svg>
+      </button>
+      <a class="v-back" id="backLink" href="../index.html#work">← <span>Back to work</span></a>
+    </div>
+  </header>
+
+  <main class="v-main" id="stage">
+    <button class="v-arrow prev" id="prev" type="button" aria-label="Previous slide"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M13 8H3M7 4L3 8l4 4"/></svg></button>
+    <figure class="v-stage">
+      <picture class="v-frame">
+        <source id="shotAvif" type="image/avif" srcset="../assets/work/aethel-orbital-astrodynamics/slide-01.avif">
+        <img class="v-shot" id="shot" src="../assets/work/aethel-orbital-astrodynamics/slide-01.webp" alt="AETHEL Orbital · slide 1 of 8" width="1600" height="900" fetchpriority="high" decoding="async">
+      </picture>
+    </figure>
+    <button class="v-arrow next" id="next" type="button" aria-label="Next slide"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+  </main>
+
+  <div class="v-bottom">
+    <div class="v-progress"><i id="bar"></i></div>
+    <div class="v-thumbs" id="thumbs" role="group" aria-label="All slides"></div>
+    <div class="v-foot">
+      <span class="v-hints">
+        <span><kbd>←</kbd><kbd>→</kbd> navigate</span>
+        <span><kbd>F</kbd> fullscreen</span>
+        <span><kbd>Esc</kbd> back</span>
+      </span>
+      <a class="v-next" id="nextDeck" href="../work/ecopack-pro.html">Next deck <b>EcoPack Pro</b> <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+
+  <div class="v-toast" id="vToast" role="status" aria-live="polite"></div>
+
+  <noscript><p style="padding:20px">This deck viewer needs JavaScript. <a href="../index.html#work">Back to work</a>.</p></noscript>
+  <script>
+    window.QW_DECK_SLUG = "aethel-orbital-astrodynamics";
+    window.QW_BASE = "../";
+    window.QW_THEME = document.documentElement.dataset.theme;
+  </script>
+  <script src="../assets/data/decks.js" defer></script>
+  <script src="../assets/js/viewer.js" defer></script>
+</body>
+</html>
