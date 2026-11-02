@@ -262,8 +262,27 @@
 
   /* ---------- controls ---------- */
 
-  if (prevBtn) prevBtn.addEventListener("click", function () { go(index - 1); });
-  if (nextBtn) nextBtn.addEventListener("click", function () { go(index + 1); });
+  if (prevBtn) prevBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    go(index - 1);
+  });
+  if (nextBtn) nextBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    go(index + 1);
+  });
+
+  /* Click left/right thirds of the stage to navigate (classic deck UX) */
+  if (stage) {
+    stage.addEventListener("click", function (e) {
+      if (stage.classList.contains("is-zoom")) return;
+      if (e.target.closest(".v-arrow")) return;
+      var rect = stage.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var third = rect.width / 3;
+      if (x < third) go(index - 1);
+      else if (x > third * 2) go(index + 1);
+    });
+  }
 
   document.addEventListener("keydown", function (e) {
     if (e.defaultPrevented) return;

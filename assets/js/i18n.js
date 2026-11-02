@@ -139,7 +139,7 @@
       "contact.ch_mail": "E-Mail",
       "contact.ch_tg": "Telegram",
       "contact.ch_wa": "WhatsApp",
-      "contact.wa_hint": "WhatsApp: App öffnen und nach <b>@qwiqly</b> suchen, falls der Link noch nicht auflöst.",
+      "contact.wa_hint": "WhatsApp öffnet einen direkten Chat mit dem Studio.",
       "contact.meta": "<span>Europa / Kyjiw</span><span>Grenzüberschreitende Zusammenarbeit</span><span>Echte interaktive Arbeit</span>",
 
       // Footer
@@ -285,7 +285,7 @@
       "contact.ch_mail": "E-mail",
       "contact.ch_tg": "Telegram",
       "contact.ch_wa": "WhatsApp",
-      "contact.wa_hint": "WhatsApp : ouvrez l’app et recherchez <b>@qwiqly</b> si le lien ne s’ouvre pas encore.",
+      "contact.wa_hint": "WhatsApp ouvre un chat direct avec le studio.",
       "contact.meta": "<span>Europe / Kyiv</span><span>Collaboration internationale</span><span>Travaux interactifs réels</span>",
 
       // Footer
@@ -431,7 +431,7 @@
       "contact.ch_mail": "Email",
       "contact.ch_tg": "Telegram",
       "contact.ch_wa": "WhatsApp",
-      "contact.wa_hint": "WhatsApp: abre la app y busca <b>@qwiqly</b> si el enlace aún no resuelve.",
+      "contact.wa_hint": "WhatsApp abre un chat directo con el estudio.",
       "contact.meta": "<span>Europa / Kiev</span><span>Colaboración internacional</span><span>Proyectos interactivos reales</span>",
 
       // Footer
